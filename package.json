@@ -1,0 +1,29 @@
+{
+  "name": "fullstackstocks",
+  "version": "0.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "currency-convert": "^1.0.0",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "gfinance": "0.0.5",
+    "markitondemand": "^1.0.3",
+    "money-js": "^1.0.2",
+    "mongoose": "^4.11.7",
+    "morgan": "~1.8.1",
+    "quandl": "0.0.6",
+    "request": "^2.81.0",
+    "serve-favicon": "~2.4.2",
+    "simple-get": "^2.7.0",
+    "stocks.js": "0.0.17",
+    "ticker-tape": "0.0.0",
+    "xml2js": "^0.4.19",
+    "yahoo-stocks": "^2.0.0"
+  }
+}

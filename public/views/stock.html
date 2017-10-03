@@ -1,0 +1,112 @@
+
+<section>
+   
+<div id="chartWrap" class="container">
+    <div id="spinner" ng-show="vm.loaded === false">
+    <span class="glyphicon glyphicon-refresh spinning">
+     
+        </span>&nbsp;&nbsp; Loading...</div>
+    <!--ul id="chartButtonList"  style="list-style: none;" ng-show="vm.loaded === true;">
+    <li class="chartLi">
+        <button onclick="barhighlight()" class="btn btn-default chartButton" id="barButton" style="width: 7vw; font-size: 0.7vw;" ng-click="vm.runStockRequest(0)">LineChart</button>
+    </li>
+    <li class="chartLi">
+    <button class="btn btn-default chartButton" id="lineButton" style="width: 7vw; font-size: 0.7vw;" ng-click="vm.runStockRequest(1)">ScatterChart</button>
+    </li>    
+    </ul-->
+      <div class="dropup" id="chartButtonList" ng-show="vm.loaded === true;">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Chart Type
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button" selected="selected" ng-click="vm.runStockRequest(1);vm.reCalc();">Line</button>
+    <button class="dropdown-item" type="button" ng-click="vm.runStockRequest(2);vm.reCalc();">Scatter</button>
+    <button class="dropdown-item" type="button" ng-click="vm.runStockRequest(3);vm.reCalc();">Area</button> 
+  </div>
+</div>
+
+    <div class="closeTime"><label>{{vm.formattedCloseData}}</label></div>
+    <div class="closePrice"><label>{{vm.closePrice}}&nbsp;</label></div>
+    <div class="priceChangeStock" ng-show="vm.priceChange > 0" ng-style="{'color': 'green'}"><i class="glyphicon glyphicon-triangle-top" ng-show="vm.loaded === true;"></i>&nbsp;<label style="font-weight: 900;"> {{vm.priceChange}}</label></div>
+    <div class="priceChangeStock" ng-show="vm.priceChange === 0" ng-style="{'color': 'black'}"><label>{{vm.priceChange}}</label></div>
+    <div class="priceChangeStock" ng-show="vm.priceChange < 0" ng-style="{'color': 'red'}"><i class="glyphicon glyphicon-triangle-bottom" ng-show="vm.loaded === true;"></i>&nbsp;<label>{{vm.priceChange}}</label></div>
+    
+    <div class="priceChangePercentStock" ng-show="vm.priceChange > 0" ng-style="{'color': 'green'}">{{'('+vm.pricePercent + ')'}}</div>
+    <div class="priceChangePercentStock" ng-show="vm.priceChange === 0" ng-style="{'color': 'black'}">{{'(' + vm.pricePercent + ')'}}</div>
+    <div class="priceChangePercentStock" ng-show="vm.priceChange < 0" ng-style="{'color': 'red'}">{{'(' + vm.pricePercent + ')'}}</div>
+<div id="chartContainer">
+        
+    </div>
+  <div class="dropup" id="timeLineGroup" ng-show="vm.loaded === true;">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Interval
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button" selected="selected" ng-click="vm.getSelectionInterval('1min');vm.runStockRequest(vm.currentGraph);vm.reCalc();">1min</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionInterval('60min');vm.runStockRequest(vm.currentGraph);vm.reCalc();">60min</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionInterval('daily');vm.runStockRequest(vm.currentGraph);vm.reCalc();">daily</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionInterval('weekly');vm.runStockRequest(vm.currentGraph);vm.reCalc();">weekly</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionInterval('monthly');vm.runStockRequest(vm.currentGraph);vm.reCalc();">monthly</button>  
+  </div>
+</div>
+    
+  <div class="dropup" id="timeLineGroup" ng-show="vm.loaded === true;" style="margin-left: 80px";>
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Period
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(2);vm.runStockRequest(vm.currentGraph);vm.reCalc();">1</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(3);vm.runStockRequest(vm.currentGraph);vm.reCalc();">2</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(4);vm.runStockRequest(vm.currentGraph);vm.reCalc();">3</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(5);vm.runStockRequest(vm.currentGraph);vm.reCalc();">4</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(6);vm.runStockRequest(vm.currentGraph);vm.reCalc();">5</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(7);vm.runStockRequest(vm.currentGraph);vm.reCalc();">6</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(8);vm.runStockRequest(vm.currentGraph);vm.reCalc();">7</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(9);vm.runStockRequest(vm.currentGraph);vm.reCalc();">8</button> 
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(10);vm.runStockRequest(vm.currentGraph);vm.reCalc();">9</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(13);vm.runStockRequest(vm.currentGraph);vm.reCalc();">12</button>  
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(57);vm.runStockRequest(vm.currentGraph);vm.reCalc();">56</button> 
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(101);vm.runStockRequest(vm.currentGraph);vm.reCalc();">100</button>  
+    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(357);vm.runStockRequest(vm.currentGraph);vm.reCalc();">356</button>  
+   
+ 
+      
+  </div>
+      
+</div>   
+ <div id="periodContainer" ng-show="vm.loaded === true;">
+     <div id="comparisonLabel">{{'Comparison Between'}}</div>
+    <label id="intervalLabel">{{vm.intLabel}}</label>
+    <label id="periodLabel">{{vm.amount - 1}}</label>
+    </div>
+    
+ 
+    
+</div>
+       <div class="historicContainer" ng-show="vm.loaded === true;">
+        <table style="width: 100%;">
+            <caption style="font-weight: 900; color: black;">HISTORIC DATA for Period</caption>
+            <tr>
+            <th class="text-center">DATE</th><th class="text-center">OPEN</th><th class="text-center">HIGH</th><th class="text-center">LOW</th><th class="text-center">CLOSE</th><th class="text-center">Vol</th>
+            </tr>
+            <tr ng-repeat="item in vm.historic | limitTo: vm.historic.length - 1">
+            <td class="hist" ng-bind="item.date | date: 'medium' | limitTo: 12"></td>
+            <td class="hist" ng-bind="item.open"></td>
+            <td class="hist" ng-bind="item.high"></td>
+            <td class="hist" ng-bind="item.low"></td>
+            <td class="hist" ng-bind="item.close"></td>
+            <td class="hist" ng-bind="item.volume"></td>
+            </tr>
+        </table>
+    </div>
+     <div ng-if="vm.tof === true" class="loadingOverlay">
+         
+  <div class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+  
+</div>
+    </div>
+
+</section>

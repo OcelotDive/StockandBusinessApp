@@ -1,0 +1,660 @@
+html {}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.clear {
+    clear: both;
+}
+
+.mainPage {
+    position: absolute;
+    width: 96%;
+    height: 91%;
+    /* border: solid 1px black;*/
+    top: 0%;
+    left: 0%;
+    margin: 2%;
+    overflow: hidden;
+    font-family: 'Black Ops One', cursive;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+20,2989d8+50,1e5799+80&0+0,0.8+15,1+19,1+81,0.8+85,0+100;Blue+Two+Sided+Transparent */
+    background: -moz-linear-gradient(-45deg, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.8) 15%, rgba(30, 87, 153, 1) 19%, rgba(30, 87, 153, 1) 20%, rgba(41, 137, 216, 1) 50%, rgba(30, 87, 153, 1) 80%, rgba(30, 87, 153, 1) 81%, rgba(30, 87, 153, 0.8) 85%, rgba(30, 87, 153, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.8) 15%, rgba(30, 87, 153, 1) 19%, rgba(30, 87, 153, 1) 20%, rgba(41, 137, 216, 1) 50%, rgba(30, 87, 153, 1) 80%, rgba(30, 87, 153, 1) 81%, rgba(30, 87, 153, 0.8) 85%, rgba(30, 87, 153, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.8) 15%, rgba(30, 87, 153, 1) 19%, rgba(30, 87, 153, 1) 20%, rgba(41, 137, 216, 1) 50%, rgba(30, 87, 153, 1) 80%, rgba(30, 87, 153, 1) 81%, rgba(30, 87, 153, 0.8) 85%, rgba(30, 87, 153, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#001e5799', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    border-radius: 1%;
+}
+
+.contentContainer {
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    border-radius: 10%;
+    width: 40%;
+    height: 40%;
+    text-align: center;
+    background: -moz-linear-gradient(top, rgba(149, 149, 149, 1) 0%, rgba(13, 13, 13, 1) 46%, rgba(1, 1, 1, 1) 50%, rgba(10, 10, 10, 1) 53%, rgba(78, 78, 78, 1) 76%, rgba(56, 56, 56, 1) 87%, rgba(27, 27, 27, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(149, 149, 149, 1) 0%, rgba(13, 13, 13, 1) 46%, rgba(1, 1, 1, 1) 50%, rgba(10, 10, 10, 1) 53%, rgba(78, 78, 78, 1) 76%, rgba(56, 56, 56, 1) 87%, rgba(27, 27, 27, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(149, 149, 149, 1) 0%, rgba(13, 13, 13, 1) 46%, rgba(1, 1, 1, 1) 50%, rgba(10, 10, 10, 1) 53%, rgba(78, 78, 78, 1) 76%, rgba(56, 56, 56, 1) 87%, rgba(27, 27, 27, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b', GradientType=0);
+    /* IE6-9 */
+}
+
+.commoditiesContainer {
+    position: fixed;
+    top: 72%;
+    margin-left: 1%;
+    border-radius: 10%, 10%, 0%, 0%;
+    width: 94%;
+    height: 0%;
+    text-align: center;
+    font-size: 2vw;
+    /* background: rgb(149,149,149); 
+background: -moz-linear-gradient(top, rgba(149,149,149,1) 0%, rgba(13,13,13,1) 46%, rgba(1,1,1,1) 50%, rgba(10,10,10,1) 53%, rgba(78,78,78,1) 76%, rgba(56,56,56,1) 87%, rgba(27,27,27,1) 100%); 
+background: -webkit-linear-gradient(top, rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%); 
+background: linear-gradient(to bottom, rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); */
+    overflow: hidden;
+    /*box-shadow: 10px 10px 10px black;*/
+    opacity: 0.8;
+}
+
+.commoditiesTitle {
+    position: absolute;
+    left: 2%;
+    color: white;
+    clear: both;
+    margin-top: 1%;
+    font-size: 150%;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+#gold {
+    position: absolute;
+    margin-top: 4%;
+    left: 5%;
+}
+
+#silver {
+    position: absolute;
+    margin-top: 6%;
+    left: 5%;
+}
+
+#oil {
+    position: absolute;
+    margin-top: 8%;
+    left: 5%;
+}
+
+#aluminum {
+    position: absolute;
+    margin-top: 4%;
+    left: 30%;
+}
+
+#tin {
+    position: absolute;
+    margin-top: 6%;
+    left: 30%;
+}
+
+#corn {
+    position: absolute;
+    margin-top: 8%;
+    left: 30%;
+}
+
+#wheat {
+    position: absolute;
+    margin-top: 4%;
+    left: 55%;
+}
+
+#cattle {
+    position: absolute;
+    margin-top: 6%;
+    left: 55%;
+}
+
+#naturalGas {
+    position: absolute;
+    margin-top: 8%;
+    left: 55%;
+}
+
+#iridium {
+    position: absolute;
+    margin-top: 4%;
+    left: 80%;
+}
+
+#lumber {
+    position: absolute;
+    margin-top: 6%;
+    left: 80%;
+}
+
+#sugar {
+    position: absolute;
+    margin-top: 8%;
+    left: 80%;
+}
+
+.splashImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    box-shadow: 10px 10px 10px black;
+}
+
+.mainTitle {
+    width: 100%;
+    height: 26%;
+}
+
+.titleSplitOne {
+    font-size: 500%;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    width: 100%;
+}
+
+.titleSplitTwo {
+    font-size: 600%;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    width: 100%;
+}
+
+.tickerTrack {
+    position: absolute;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1%;
+    height: 17%;
+    opacity: .8;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-radius: 5% 5% 5% 5%;
+    font-family: 'Orbitron', sans-serif;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#959595+0,0d0d0d+46,010101+50,0a0a0a+53,4e4e4e+76,383838+87,1b1b1b+100;Black+Gloss+Pipe */
+    background: rgb(149, 149, 149);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(149, 149, 149, 1) 0%, rgba(13, 13, 13, 1) 46%, rgba(1, 1, 1, 1) 50%, rgba(10, 10, 10, 1) 53%, rgba(78, 78, 78, 1) 76%, rgba(56, 56, 56, 1) 87%, rgba(27, 27, 27, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(149, 149, 149, 1) 0%, rgba(13, 13, 13, 1) 46%, rgba(1, 1, 1, 1) 50%, rgba(10, 10, 10, 1) 53%, rgba(78, 78, 78, 1) 76%, rgba(56, 56, 56, 1) 87%, rgba(27, 27, 27, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(149, 149, 149, 1) 0%, rgba(13, 13, 13, 1) 46%, rgba(1, 1, 1, 1) 50%, rgba(10, 10, 10, 1) 53%, rgba(78, 78, 78, 1) 76%, rgba(56, 56, 56, 1) 87%, rgba(27, 27, 27, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b', GradientType=0);
+    /* IE6-9 */
+    overflow: hidden;
+}
+
+#quoteButton {
+    position: absolute;
+    top: 20%;
+    margin-left: 6%;
+}
+
+#commoditiesButton {
+    position: absolute;
+    top: 28%;
+    margin-left: 6%;
+}
+#currenciesButton {
+    position: absolute;
+    top: 36%;
+    margin-left: 6%;
+    
+}
+
+
+#newsSourceButton {
+     position: absolute;
+    top: 44%;
+    margin-left: 6%;
+}
+
+.addText {
+    margin-left: 10%;
+    margin-top: 4%;
+    width: 100%;
+    background-color: white;
+    float: right;
+}
+
+.stockInit {
+    position: absolute;
+    margin-top: 1%;
+    white-space: nowrap;
+    color: aliceblue;
+    font-size: 200%;
+    -webkit-animation: slideInit 32s forwards;
+    -moz-animation: slideInit 32s forwards;
+    animation: slideInit 32s forwards;
+}
+
+.stockStrip {
+    width: 20000px;
+    height: 90px;
+    -webkit-animation: slideIn 120s infinite;
+    -moz-animation: slideIn 120s infinite;
+    animation: slideIn 120s infinite;
+    /* -webkit-animation-direction: alternate; 
+    animation-direction: alternate;*/
+    animation-timing-function: linear;
+    position: absolute;
+    top: 5%;
+}
+
+.outerWrapper {
+    height: 90px;
+    width: 1700px;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    margin-right: 2%;
+}
+
+.stockWrapper {
+    position: absolute;
+    margin-top: 1.5%;
+    white-space: nowrap;
+    width: auto;
+    display: inline-block;
+}
+
+.stockNameLabel {
+    color: aliceblue;
+    font-size: 320%;
+    margin-right: 2%;
+}
+
+.stockPriceLabel {
+    color: aliceblue;
+    font-size: 290%;
+    margin-right: 2%;
+}
+
+.stockChangeLabel,
+.stockChangePercentageLabel {
+    font-weight: 900;
+    font-size: 150%;
+    margin-right: 2%;
+}
+
+.stockMarketLabel {
+    color: aliceblue;
+}
+
+#stockModal {
+    position: absolute;
+    top: 40%;
+}
+
+.inputSection {
+    position: absolute;
+    top: 20%;
+    left: 72%;
+    height: 95%;
+}
+
+.listContainer {
+    position: absolute;
+    height: 95%;
+    width: 50%;
+    margin-top: 5PX;
+    margin-left: -20PX;
+}
+
+#stockList {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+
+.currentStockLabel {
+    font-weight: 900;
+    color: darkslategray;
+    border-bottom: 1px solid;
+}
+
+#spinner {
+    width: 100%;
+    margin-left: 30%;
+    font-size: 300%;
+    padding-top: 40%;
+}
+
+#chartButtonList {
+    position: absolute;
+    top: 20%;
+    left: 3%;
+}
+
+#timeLineGroup {
+    position: absolute;
+    top: 88%;
+    left: 25%;
+}
+
+#periodContainer {
+    position: absolute;
+    top: 88%;
+    left: 40%;
+    font-weight: 900;
+    color: #000000;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.chartLi {
+    margin-bottom: 3%;
+}
+
+.closeTime {
+    font-weight: 900;
+    position: absolute;
+    top: 8%;
+    left: 39%;
+    color: black;
+}
+
+.closePrice {
+    font-weight: 900;
+    position: absolute;
+    top: 10%;
+    left: 39%;
+    color: black;
+    font-size: 2vw;
+}
+
+.priceChangeStock {
+    font-weight: 900;
+    position: absolute;
+    top: 11%;
+    left: 48%;
+    color: black;
+    font-size: 1.6vw;
+    margin-left: 2%;
+}
+
+.priceChangePercentStock {
+    font-weight: 900;
+    position: absolute;
+    top: 11%;
+    left: 55.5%;
+    color: black;
+    font-size: 1.6vw;
+    margin-left: 2%;
+}
+
+.chartContainer {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.historicContainer {
+    position: absolute;
+    top: 36%;
+    left: 3%;
+    width: 20%;
+    height: 30%;
+    overflow-X: hidden;
+   
+}
+
+table
+th,tr,td{
+    border: solid 2px lightblue;
+    border-collapse: collapse;
+    font-size: 0.7vw;
+    text-align: center;
+}
+
+/*.hist{
+    border: solid 1px grey;
+    border-right: solid 2px lightblue;
+    text-align: center;
+    padding: 20px;
+}*/
+
+.commodityDiv {
+    padding-top: 20px;
+    font-size: 1vw;
+    color: #ffffff;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.loadingOverlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 100;
+}
+
+.exchangeRateContainer {
+    position: absolute;
+    width: 21%;
+    height: 0%;
+    left: 73%;
+    top: 38%;
+    overflow:hidden;
+    text-align: center;
+    
+}
+.currencyTable {
+    text-align: center;
+    color: #ffffff;
+    
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+.currencyHeader {
+    color: #ffffff;
+    text-align: left;
+    font-size: 120%;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+.flag {
+    width: 50%;
+    
+}
+
+/*Spinner for graph change*/
+
+.spinner {
+    position: absolute;
+    top: 40%;
+    left: 46%;
+    width: 50px;
+    text-align: center;
+    border: dashed 10px white;
+    -webkit-animation: spin 1.4s infinite ease-in-out both;
+    animation: spin 1.4s infinite ease-in-out both;
+}
+
+.spinner>div {
+    width: 18px;
+    height: 18px;
+    background-color:#fff;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+    border-radius: 150%;
+    display: inline-block;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out both;
+    animation: bouncedelay 1.4s infinite ease-in-out both;
+     
+}
+
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+@-webkit-keyframes bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0)
+    }
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+
+/*************Keyframes*****************/
+
+@-webkit-keyframes slideInit {
+    0% {
+        transform: translateX(600px);
+    }
+    100% {
+        transform: translateX(-2000px);
+    }
+}
+
+@-moz-keyframes slideInit {
+    0% {
+        transform: translateX(600px);
+    }
+    100% {
+        transform: translateX(-2000px);
+    }
+}
+
+@keyframes slideInit {
+    0% {
+        transform: translateX(600px);
+    }
+    100% {
+        transform: translateX(-2000px);
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        transform: translateX(1500px);
+    }
+    100% {
+        transform: translateX(-26700px);
+    }
+}
+
+@-moz-keyframes slideIn {
+    0% {
+        transform: translateX(1500px);
+    }
+    100% {
+        transform: translateX(-26700px);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(1500px);
+    }
+    100% {
+        transform: translateX(-26700px);
+    }
+}
+
+@-webkit-keyframes slideIn2 {
+    0% {
+        transform: translateX(1500px);
+    }
+    100% {
+        transform: translateX(-4800px);
+    }
+}
+
+@-moz-keyframes slideIn2 {
+    0% {
+        transform: translateX(1500px);
+    }
+    100% {
+        transform: translateX(-4800px);
+    }
+}
+
+@keyframes slideIn2 {
+    0% {
+        transform: translateX(1500px);
+    }
+    100% {
+        transform: translateX(-4800px);
+    }
+}
+
+.glyphicon.spinning {
+    animation: spin 3s infinite linear;
+    -webkit-animation: spin2 3s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+    to {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin2 {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}

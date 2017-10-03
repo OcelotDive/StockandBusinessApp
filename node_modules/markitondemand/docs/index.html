@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>markitondemand.js</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+      pre {
+        background-color: #FFF;
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+      pre :after, pre :before {
+        padding: 0;
+        margin: 0;
+      }
+      code {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/atelier-lakeside-dark.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="text-center" style="margin-top: 100px;">
+        <img src="img/markitondemand.png" width="200" alt="markitondemand.js" />
+        <h1>markitondemand.js</h1>
+        <h4>A Node.js module for looking up Stock Quotes<br> from the markitondemand APIs with Promises</h4>
+      </div>
+
+
+      <div class"row" style="margin-top: 50px;">
+        <div class="col-lg-6 col-lg-offset-3 text-center">
+
+          <h3>Installation</h3>
+          Installing markitondemand is easy:<br><br>
+
+          <pre class="text-left">
+            <code class="bash">
+  $ npm install --save markitondemand
+            </code>
+          </pre>
+        </div>
+      </div>
+
+
+      <div class"row">
+        <div class="col-lg-8 col-lg-offset-2 text-center" style="margin-top: 75px;">
+          <h2 style="margin-bottom: 50px;">API & Usage</h2>
+
+
+          <h3>getQuote( )</h3>
+
+          You can get a single stock quote using <code>getQuote()</code>:
+
+          <pre class="text-left">
+            <code class="javascript hljs">
+  var markitondemand = require('markitondemand');
+
+  markitondemand.getQuote('AAPL')
+  .then(data => console.log(data))
+  .catch(error => {
+    console.error(error.message);
+  });
+            </code>
+          </pre>
+
+
+          <h3>getQuotes()</h3>
+
+          Want to lookup multiple stock symbols? Use <code>getQuotes()</code>:
+
+          <pre class="text-left">
+            <code class="javascript hljs">
+  var markitondemand = require('markitondemand');
+
+  markitondemand.getQuotes(['AAPL', 'GOOGL'])
+  .then(data => console.log(data))
+  .catch(error => {
+    console.error(error.message);
+  });
+            </code>
+          </pre>
+
+
+          <h3>getQuotesObject()</h3>
+
+          Get multiple stock quotes back in a keyed object using <code>getQuotesObject()</code>:
+
+          <pre class="text-left">
+            <code class="javascript hljs">
+  var markitondemand = require('markitondemand');
+
+  markitondemand.getQuotesObject(['GOOG', 'AAPL', 'TSLA', 'NVDA'])
+  .then(data => console.log(data))
+  .catch(error => {
+    console.error(error.message);
+  });
+            </code>
+          </pre>
+
+
+
+          <h3>getStock()</h3>
+
+          You can use either <code>getStock()</code> or <code>lookup()</code> to lookup symbols:
+
+          <pre class="text-left">
+            <code class="javascript hljs">
+  var markitondemand = require('markitondemand');
+
+  markitondemand.getStock('AAPL')
+  .then(data => console.log(data))
+  .catch(error => {
+    console.error(error.message);
+  });
+            </code>
+          </pre>
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<section class="mainPage">
+    <!--div class="mainTitle">
+    <div class="titleSplitOne">STOCK</div>
+    <div class="titleSplitTwo">TRACKER</div>
+    </div-->
+    
+    <div class="tickerTrack" style="white-space: nowrap;">
+        <!--span class="stockInit"><label>{{vm.d}} {{vm.time}}</label></span-->
+       <div class="stockStrip">
+        <div class="outerWrapper" ng-attr-id="{{'Stock_' + $index}}" ng-repeat="item in vm.news">
+    <span class="stockWrapper"><label class="stockNameLabel" style="margin-left: 1%"><a style="text-decoration: none;color:#ffffff;" target="_blank" href="{{item.url}}">{{item.title}}</a></label>
+            <!--label class="stockPriceLabel">{{}}</label>
+            <label class="stockChangeLabel" ng-style="stock.change[0] ==='+' ? {'color': 'green'} : {'color': 'red'};">{{stock.change | limitTo: 5}}</label>
+        <label class="stockChangePercentageLabel" ng-style="stock.change[0] ==='+' ? {'color': 'green'} : {'color': 'red'};">({{stock.percentchange | limitTo: 5}})</label-->
+        <label class="stockMarketLabel">"{{vm.newsSource}}"</label>
+        </span>
+           
+        </div>
+           <span style="color: aliceblue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://newsapi.org/" target="_blank" style="text-decoration: none; color: #ffffff;">Powered by NewsApi. </a></span>
+        </div>
+    
+    
+    </div>
+    <section class="contentContainer">
+             
+        
+        
+    <img class="splashImage" src="../images/2000px-World_map.png"/>
+    
+    </section>
+    <button id="quoteButton" class="btn btn-default" onclick="" data-toggle="modal" data-target="#stockModal">Quotes</button>
+    <button id="commoditiesButton" class="btn btn-default" onclick="expand()">Commodities</button>
+    <button id="currenciesButton" class="btn btn-default" onclick="expandCurrencies()">Currencies</button>
+    
+    <div class="dropdown" id="newsSourceButton">
+  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    News Source
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button" selected="selected" ng-click="vm.getNews('the-wall-street-journal');">Wall Street Journal</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getNews('fortune');">Fortune</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getNews('the-economist');">The Economist</button>
+    <button class="dropdown-item" type="button" ng-click="vm.getNews('techradar');">Tech Radar</button>
+      <button class="dropdown-item" type="button" ng-click="vm.getNews('cnbc');">CNBC</button>
+      <button class="dropdown-item" type="button" ng-click="vm.getNews('bloomberg');">Bloomberg</button>
+      <button class="dropdown-item" type="button" ng-click="vm.getNews('reuters');">Reuters</button> 
+  </div>
+</div>
+    
+    
+    
+    
+    
+    <!--stock modal-->
+       <div id="stockModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title" style="font-weight: 900;">Stock Tracker</h4>
+            </div>
+            <div class="modal-body">
+               
+        <div class="listContainer">
+        <ol style="list-style: none; margin-top: 5%;" id="stockList">
+            <li  ng-repeat="stock in vm.stocks" data-dismiss="modal" ng-click="vm.stockIndex = $index;vm.stockIndexSelect();" >
+             <label class="currentStockLabel" title="{{stock.symbol}}">{{stock.symbol}}</label>
+            
+            </li>
+        </ol>
+        </div>
+  
+        <div class="inputSection">
+   <input class="addText" type="text" placeholder="SYMBOL" ng-model="vm.stock.symbol"/> 
+        
+      
+         
+        </div>
+    
+              
+            </div>
+            <div class="modal-footer">
+                
+                <button type="button" class="btn btn-default"  ng-click="vm.addStock();">ADD</button>
+                <button type="button" class="btn btn-default"  ng-click="vm.removeStock();">REMOVE</button>
+                
+            </div>
+           
+        </div>
+    </div>
+</div>
+    
+    <div class="exchangeRateContainer"><label class="currencyHeader">LIVE EXCHANGE RATES</label>
+        <table id="cryTable" class="currencyTable" style="border: none;">
+            <tr style="border: none;"><th style="visibility: hidden;"></th><th style="border: none;"><img class="flag" src="../images/flags/us.png"/></th>
+            <th style="border: none;"><img class="flag" src="../images/flags/euro.png"/></th><th style="border: none;"><img class="flag" src="../images/flags/uk.png"/></th>
+            <th style="border: none;"><img class="flag" src="../images/flags/can.png"/></th><th style="border: none;"><img class="flag" src="../images/flags/aus.png"/></th>
+            <th style="border: none;"><img class="flag" src="../images/flags/japan.png"/></th></tr>
+            <tr style="border: none;"><td style="border: none;"><img class="flag" src="../images/flags/us.png"/></td><td style="border: none;">1.00</td><td style="border: none;">{{vm.currenciesUS.eur}}</td><td style="border: none;">{{vm.currenciesUS.gbp}}</td><td style="border: none;">{{vm.currenciesUS.cad}}</td><td style="border: none;">{{vm.currenciesUS.aud}}</td><td style="border: none;">{{vm.currenciesUS.jpy}}</td></tr>
+            <tr style="border: none;"><td style="border: none;"><img class="flag" src="../images/flags/euro.png"/></td><td style="border: none;">{{vm.currenciesEURO.usd}}</td><td style="border: none;">1.00</td><td style="border: none;">{{vm.currenciesEURO.gbp}}</td><td style="border: none;">{{vm.currenciesEURO.cad}}</td><td style="border: none;">{{vm.currenciesEURO.aud}}</td><td style="border: none;">{{vm.currenciesEURO.jpy}}</td></tr>
+            <tr style="border: none;"><td style="border: none;"><img class="flag" src="../images/flags/uk.png"/></td><td style="border: none;">{{vm.currenciesPOUNDS.usd}}</td><td style="border: none;">{{vm.currenciesPOUNDS.eur}}</td><td style="border: none;">1.00</td><td style="border: none;">{{vm.currenciesPOUNDS.cad}}</td><td style="border: none;">{{vm.currenciesPOUNDS.aud}}</td><td style="border: none;">{{vm.currenciesPOUNDS.jpy}}</td></tr>
+            <tr style="border: none;"><td style="border: none;"><img class="flag" src="../images/flags/can.png"/></td><td style="border: none;">{{vm.currenciesCANADIAN.usd}}</td><td style="border: none;">{{vm.currenciesCANADIAN.eur}}</td><td style="border: none;">{{vm.currenciesCANADIAN.gbp}}</td><td style="border: none;">1.00</td><td style="border: none;">{{vm.currenciesCANADIAN.aud}}</td><td style="border: none;">{{vm.currenciesCANADIAN.jpy}}</td></tr>
+            <tr style="border: none;"><td style="border: none;"><img class="flag" src="../images/flags/aus.png"/></td><td style="border: none;">{{vm.currenciesAUSTRALIAN.usd}}</td><td style="border: none;">{{vm.currenciesAUSTRALIAN.eur}}</td><td style="border: none;">{{vm.currenciesAUSTRALIAN.gbp}}</td><td style="border: none;">{{vm.currenciesAUSTRALIAN.cad}}</td><td style="border: none;">1.00</td><td style="border: none;">{{vm.currenciesAUSTRALIAN.jpy}}</td></tr>
+            <tr style="border: none;"><td style="border: none;"><img class="flag" src="../images/flags/japan.png"/></td><td style="border: none;">{{vm.currenciesYEN.usd}}</td><td style="border: none;">{{vm.currenciesYEN.eur}}</td><td style="border: none;">{{vm.currenciesYEN.gbp}}</td><td style="border: none;">{{vm.currenciesYEN.cad}}</td><td style="border: none;">{{vm.currenciesYEN.aud}}</td><td style="border: none;">1.00</td></tr>
+        </table>
+    
+    </div>
+    
+    
+    <div class="commoditiesContainer">
+    <h1 class="commoditiesTitle">GLOBAL COMMODITIES</h1>
+        <div id="gold" class="commodityDiv">
+        <span style="font-size: 130%;">{{'Gold'}}</span>&nbsp;&nbsp;<span>{{vm.goldres.data[vm.goldres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        </div>
+         <div id="silver" class="commodityDiv">
+        <span style="font-size: 130%;">{{'Silver'}}</span>&nbsp;&nbsp;<span>{{vm.silverres.data[vm.silverres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        </div>
+         <div id="oil" class="commodityDiv">
+        <span style="font-size: 130%;">{{'Crude Oil'}}</span>&nbsp;&nbsp;<span>{{vm.oilres.data[vm.oilres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        </div>
+         <div id="aluminum" class="commodityDiv">
+        <span style="font-size: 130%;">{{'Aluminum'}}</span>&nbsp;&nbsp;<span>{{vm.aluminumres.data[vm.aluminumres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        </div>
+         <div id="tin" class="commodityDiv">
+        <span style="font-size: 130%;">{{'Tin'}}</span>&nbsp;&nbsp;<span>{{vm.tinres.data[vm.tinres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        </div>
+         <div id="corn" class="commodityDiv">
+        <span style="font-size: 130%;">{{'Corn'}}</span>&nbsp;&nbsp;<span>{{vm.cornres.data[vm.cornres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        </div>
+          <div id="wheat" class="commodityDiv">
+        <span style="font-size: 130%;">{{'Wheat'}}</span>&nbsp;&nbsp;<span>{{vm.wheatres.data[vm.wheatres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        </div>
+         <div id="cattle" class="commodityDiv">
+        <span style="font-size: 130%;">{{'Cattle'}}</span>&nbsp;&nbsp;<span>{{vm.cattleres.data[vm.cattleres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        </div>
+        <div id="naturalGas" class="commodityDiv">
+        <span style="font-size: 130%;">{{'Natural Gas'}}</span>&nbsp;&nbsp;<span>{{vm.naturalGasres.data[vm.naturalGasres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        </div>
+        <div id="iridium" class="commodityDiv">
+        <span style="font-size: 130%;">{{'Iridium'}}</span>&nbsp;&nbsp;<span>{{vm.iridiumres.data[vm.iridiumres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        </div>
+        <div id="lumber" class="commodityDiv">
+        <span style="font-size: 130%;">{{'Lumber'}}</span>&nbsp;&nbsp;<span>{{vm.lumberres.data[vm.lumberres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        </div>
+        <div id="sugar" class="commodityDiv">
+        <span style="font-size: 130%;">{{'Sugar'}}</span>&nbsp;&nbsp;<span>{{vm.sugarres.data[vm.sugarres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        </div>
+            
+    </div>
+    
+   
+
+</section>
