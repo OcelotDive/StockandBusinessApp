@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var api = require('./routes/api');
 var app = express();
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 var db = 'mongodb://localhost:27017/stocksapp';
 // view engine setup
 
