@@ -25,5 +25,9 @@
     "ticker-tape": "0.0.0",
     "xml2js": "^0.4.19",
     "yahoo-stocks": "^2.0.0"
+  },
+    "engines": {
+    "node": "0.8.4",
+    "npm": "1.1.41"
   }
 }
