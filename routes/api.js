@@ -348,7 +348,7 @@ jpyConversion(callback);
           
           res.end();
           
-      },3000)
+      },2000)
      
     }
 
@@ -418,7 +418,7 @@ goldResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },3000);
+                },8000);
     
  });
 
@@ -470,7 +470,7 @@ quandl.dataset({
     }
 
     res.end();
-     },3000);
+     },8000);
  });
 
 
@@ -523,7 +523,7 @@ oilResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },3000);
+                },8000);
     
  });
 
@@ -580,7 +580,7 @@ aluminumResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },3000);
+                },8000);
     
  });
 
@@ -639,7 +639,7 @@ tinResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },3000);
+                },8000);
     
  });
 
@@ -694,7 +694,7 @@ cornResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },3000);
+                },8000);
     
  });
 
@@ -747,7 +747,7 @@ wheatResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },3000);
+                },8000);
     
  });
 
@@ -802,7 +802,7 @@ cattleResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },3000);
+                },8000);
     
  });
 
@@ -857,7 +857,7 @@ naturalGasResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },3000);
+                },8000);
     
  });
 
@@ -911,7 +911,7 @@ iridiumResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },3000);
+                },8000);
     
  });
 
@@ -964,7 +964,7 @@ lumberResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },3000);
+                },8000);
     
  });
 
@@ -1018,7 +1018,7 @@ sugarResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },3000);
+                },8000);
     
  });
 

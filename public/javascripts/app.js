@@ -159,7 +159,7 @@
             
             
             
-            $interval(function() {
+            //$interval(function() {
             $http.get('/api/test')
                 .then(function (res) {
 
@@ -172,7 +172,7 @@
                     vm.currenciesAUSTRALIAN = res.data[4];
                     vm.currenciesYEN = res.data[5];
                    
-            vm.changeColor(2);
+            /*vm.changeColor(2);
             vm.changeColor(3);
             vm.changeColor(4);
             vm.changeColor(5);
@@ -201,39 +201,15 @@
             vm.changeColor(37);
             vm.changeColor(38);
             vm.changeColor(39);
-            vm.changeColor(40);
+            vm.changeColor(40);*/
 
                 }, function (err) {
                     console.log(err);
                 })
             //second request here
-            }, 20000);
+            //}, 20000);
             
-            /*vm.changeColor(2);
-            vm.changeColor(3);
-            vm.changeColor(4);
-            vm.changeColor(5);
-            vm.changeColor(6);
-            vm.changeColor(8);
-            vm.changeColor(10);
-            vm.changeColor(11);
-            vm.changeColor(12);
-            vm.changeColor(13);
-            vm.changeColor(15);
-            vm.changeColor(16);
-            vm.changeColor(18);
-            vm.changeColor(19);
-            vm.changeColor(20);
-            vm.changeColor(22);
-            vm.changeColor(23);
-            vm.changeColor(24);
-            vm.changeColor(26);
-            vm.changeColor(27);
-            vm.changeColor(29);
-            vm.changeColor(30);
-            vm.changeColor(31);
-            vm.changeColor(32);
-            vm.changeColor(33);*/
+          
             
         }
         vm.startCurrency();
@@ -446,7 +422,7 @@
         };
         vm.getAllcommodities();
         
-        $interval(vm.getAllcommodities,60000);
+        $interval(vm.getAllcommodities,10000);
 
 
     }
