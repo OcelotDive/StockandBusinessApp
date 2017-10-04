@@ -418,7 +418,7 @@ goldResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },8000);
+                },500);
     
  });
 
@@ -470,7 +470,7 @@ quandl.dataset({
     }
 
     res.end();
-     },8000);
+     },500);
  });
 
 
@@ -523,7 +523,7 @@ oilResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },8000);
+                },500);
     
  });
 
@@ -580,7 +580,7 @@ aluminumResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },8000);
+                },500);
     
  });
 
@@ -639,7 +639,7 @@ tinResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },8000);
+                },500);
     
  });
 
@@ -694,7 +694,7 @@ cornResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },8000);
+                },500);
     
  });
 
@@ -747,7 +747,7 @@ wheatResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },8000);
+                },500);
     
  });
 
@@ -802,7 +802,7 @@ cattleResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },8000);
+                },500);
     
  });
 
@@ -857,7 +857,7 @@ naturalGasResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },8000);
+                },500);
     
  });
 
@@ -911,7 +911,7 @@ iridiumResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },8000);
+                },500);
     
  });
 
@@ -964,7 +964,7 @@ lumberResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },8000);
+                },500);
     
  });
 
@@ -1018,7 +1018,7 @@ sugarResponse = JSON.parse(response).dataset;
     }
                  
     res.end();
-                },8000);
+                },500);
     
  });
 

@@ -422,7 +422,7 @@
         };
         vm.getAllcommodities();
         
-        $interval(vm.getAllcommodities,60000);
+        $interval(vm.getAllcommodities,30000);
 
 
     }

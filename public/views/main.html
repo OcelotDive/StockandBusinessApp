@@ -110,40 +110,52 @@
     <div class="commoditiesContainer">
     <h1 class="commoditiesTitle">GLOBAL COMMODITIES</h1>
         <div id="gold" class="commodityDiv">
-        <span style="font-size: 130%;">{{'Gold'}}</span>&nbsp;&nbsp;<span>{{vm.goldres.data[vm.goldres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span style="font-size: 130%;">{{'Gold'}}</span>&nbsp;&nbsp;<span ng-if="vm.goldres.data">{{vm.goldres.data[vm.goldres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span ng-if="!vm.goldres.data" style="color: red;">{{'UPDATING...'}}</span>    
         </div>
          <div id="silver" class="commodityDiv">
-        <span style="font-size: 130%;">{{'Silver'}}</span>&nbsp;&nbsp;<span>{{vm.silverres.data[vm.silverres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span style="font-size: 130%;">{{'Silver'}}</span>&nbsp;&nbsp;<span ng-if="vm.silverres.data">{{vm.silverres.data[vm.silverres.data.length - 1][1] + ' ' + 'USD'}}</span>
+             <span ng-if="!vm.silverres.data" style="color: red;">{{'UPDATING...'}}</span> 
         </div>
          <div id="oil" class="commodityDiv">
-        <span style="font-size: 130%;">{{'Crude Oil'}}</span>&nbsp;&nbsp;<span>{{vm.oilres.data[vm.oilres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span style="font-size: 130%;">{{'Crude Oil'}}</span>&nbsp;&nbsp;<span ng-if="vm.oilres.data">{{vm.oilres.data[vm.oilres.data.length - 1][1] + ' ' + 'USD'}}</span>
+             <span ng-if="!vm.oilres.data" style="color: red;">{{'UPDATING...'}}</span> 
         </div>
          <div id="aluminum" class="commodityDiv">
-        <span style="font-size: 130%;">{{'Aluminum'}}</span>&nbsp;&nbsp;<span>{{vm.aluminumres.data[vm.aluminumres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span style="font-size: 130%;">{{'Aluminum'}}</span>&nbsp;&nbsp;<span ng-if="vm.aluminumres.data">{{vm.aluminumres.data[vm.aluminumres.data.length - 1][1] + ' ' + 'USD'}}</span>
+             <span ng-if="!vm.aluminumres.data" style="color: red;">{{'UPDATING...'}}</span> 
         </div>
          <div id="tin" class="commodityDiv">
-        <span style="font-size: 130%;">{{'Tin'}}</span>&nbsp;&nbsp;<span>{{vm.tinres.data[vm.tinres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span style="font-size: 130%;">{{'Tin'}}</span>&nbsp;&nbsp;<span ng-if="vm.tinres.data">{{vm.tinres.data[vm.tinres.data.length - 1][1] + ' ' + 'USD'}}</span>
+             <span ng-if="!vm.tinres.data" style="color: red;">{{'UPDATING...'}}</span> 
         </div>
          <div id="corn" class="commodityDiv">
-        <span style="font-size: 130%;">{{'Corn'}}</span>&nbsp;&nbsp;<span>{{vm.cornres.data[vm.cornres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span style="font-size: 130%;">{{'Corn'}}</span>&nbsp;&nbsp;<span ng-if="vm.cornres.data">{{vm.cornres.data[vm.cornres.data.length - 1][1] + ' ' + 'USD'}}</span>
+             <span ng-if="!vm.cornres.data" style="color: red;">{{'UPDATING...'}}</span> 
         </div>
           <div id="wheat" class="commodityDiv">
-        <span style="font-size: 130%;">{{'Wheat'}}</span>&nbsp;&nbsp;<span>{{vm.wheatres.data[vm.wheatres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span style="font-size: 130%;">{{'Wheat'}}</span>&nbsp;&nbsp;<span ng-if="vm.wheatres.data">{{vm.wheatres.data[vm.wheatres.data.length - 1][1] + ' ' + 'USD'}}</span>
+              <span ng-if="!vm.wheatres.data" style="color: red;">{{'UPDATING...'}}</span> 
         </div>
          <div id="cattle" class="commodityDiv">
-        <span style="font-size: 130%;">{{'Cattle'}}</span>&nbsp;&nbsp;<span>{{vm.cattleres.data[vm.cattleres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span style="font-size: 130%;">{{'Cattle'}}</span>&nbsp;&nbsp;<span ng-if="vm.cattleres.data">{{vm.cattleres.data[vm.cattleres.data.length - 1][1] + ' ' + 'USD'}}</span>
+             <span ng-if="!vm.cattleres.data" style="color: red;">{{'UPDATING...'}}</span> 
         </div>
         <div id="naturalGas" class="commodityDiv">
-        <span style="font-size: 130%;">{{'Natural Gas'}}</span>&nbsp;&nbsp;<span>{{vm.naturalGasres.data[vm.naturalGasres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span style="font-size: 130%;">{{'Natural Gas'}}</span>&nbsp;&nbsp;<span ng-if="vm.naturalGasres.data">{{vm.naturalGasres.data[vm.naturalGasres.data.length - 1][1] + ' ' + 'USD'}}</span>
+            <span ng-if="!vm.naturalGasres.data" style="color: red;">{{'UPDATING...'}}</span> 
         </div>
         <div id="iridium" class="commodityDiv">
-        <span style="font-size: 130%;">{{'Iridium'}}</span>&nbsp;&nbsp;<span>{{vm.iridiumres.data[vm.iridiumres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span style="font-size: 130%;">{{'Iridium'}}</span>&nbsp;&nbsp;<span ng-if="vm.iridiumres.data">{{vm.iridiumres.data[vm.iridiumres.data.length - 1][1] + ' ' + 'USD'}}</span>
+            <span ng-if="!vm.iridiumres.data" style="color: red;">{{'UPDATING...'}}</span> 
         </div>
         <div id="lumber" class="commodityDiv">
-        <span style="font-size: 130%;">{{'Lumber'}}</span>&nbsp;&nbsp;<span>{{vm.lumberres.data[vm.lumberres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span style="font-size: 130%;">{{'Lumber'}}</span>&nbsp;&nbsp;<span ng-if="vm.lumberres.data">{{vm.lumberres.data[vm.lumberres.data.length - 1][1] + ' ' + 'USD'}}</span>
+            <span ng-if="!vm.lumberres.data" style="color: red;">{{'UPDATING...'}}</span> 
         </div>
         <div id="sugar" class="commodityDiv">
-        <span style="font-size: 130%;">{{'Sugar'}}</span>&nbsp;&nbsp;<span>{{vm.sugarres.data[vm.sugarres.data.length - 1][1] + ' ' + 'USD'}}</span>
+        <span style="font-size: 130%;">{{'Sugar'}}</span>&nbsp;&nbsp;<span ng-if="vm.sugarres.data">{{vm.sugarres.data[vm.sugarres.data.length - 1][1] + ' ' + 'USD'}}</span>
+            <span ng-if="!vm.sugarres.data" style="color: red;">{{'UPDATING...'}}</span> 
         </div>
             
     </div>
