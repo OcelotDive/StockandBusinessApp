@@ -207,7 +207,7 @@
                     console.log(err);
                 })
             //second request here
-            }, 1000);
+            }, 300000);
             
           
             
