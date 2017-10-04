@@ -159,7 +159,7 @@
             
             
             
-            //$interval(function() {
+            $interval(function() {
             $http.get('/api/test')
                 .then(function (res) {
 
@@ -172,7 +172,7 @@
                     vm.currenciesAUSTRALIAN = res.data[4];
                     vm.currenciesYEN = res.data[5];
                    
-            /*vm.changeColor(2);
+            vm.changeColor(2);
             vm.changeColor(3);
             vm.changeColor(4);
             vm.changeColor(5);
@@ -201,13 +201,13 @@
             vm.changeColor(37);
             vm.changeColor(38);
             vm.changeColor(39);
-            vm.changeColor(40);*/
+            vm.changeColor(40);
 
                 }, function (err) {
                     console.log(err);
                 })
             //second request here
-            //}, 20000);
+            }, 1000);
             
           
             
@@ -447,7 +447,7 @@
         var reverseURL = url.split('').reverse().join('');
         vm.currentSymbol = reverseURL.substring(0, reverseURL.indexOf('/')).split('').reverse().join('');
         vm.interval = 'daily';
-        vm.amount = 2;
+        vm.amount = 7;
         vm.getSelectionInterval = function (sel) {
             vm.interval = sel;
         }
