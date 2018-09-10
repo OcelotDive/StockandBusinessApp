@@ -6,7 +6,8 @@ var get = require('simple-get');
 var gfinance = require('gfinance');
 var Quandl = require("quandl");
 var money = require('money-js');
-const currencyConvert = require('currency-convert')
+const currencyConvert = require('currency-convert');
+const fx = require('money');
 var endDate;
 var startDate;
 
@@ -68,6 +69,11 @@ var audObject ={base: 'australian'};
 var jpyObject ={base: 'yen'};
      
    
+ fx.convert(1, {from: "USD", to: "AUD"})
+    var usdToAud = fx.convert(1, {from: "USD", to: "AUD"})//.parseFloat().toFixed(2);
+    console.log('TESTTESTTESTTESTTEST' + usdToAud)        
+        
+        
         
 function usdConversion(callback) { 
       
