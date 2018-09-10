@@ -332,7 +332,7 @@ jpyConversion(callback);
         
     currencyArr.push(object)
          
-        if(currencyArr.length === 6){
+       // if(currencyArr.length === 6){
         console.log('this is the currency array ' + currencyArr);
             
             
@@ -343,7 +343,7 @@ jpyConversion(callback);
      console.log(currencyArr)
      
      return currencyArr;
- }    
+ //}    
           
       
       setTimeout(function() {
