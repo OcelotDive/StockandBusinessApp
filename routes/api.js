@@ -74,12 +74,11 @@ var jpyObject ={base: 'yen'};
         
         
 function usdConversion(callback) { 
-       var  usdToAud = fx(1.99).from("USD").to("AED")
-       usdObject.aud = usdToAud;
+     
 currencyConvert(1, 'USD', 'AUD').then(function(resp){
-    //var  usdToAud = parseFloat(resp).toFixed(2);
+    var  usdToAud = parseFloat(resp).toFixed(2);
     
-   // usdObject.aud = usdToAud;
+    usdObject.aud = usdToAud;
 }).catch(console.log)
 
 currencyConvert(1, 'USD', 'GBP').then(function(resp){
