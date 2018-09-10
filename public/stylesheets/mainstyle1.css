@@ -338,9 +338,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
     border-bottom: 1px solid;
 }
 .currentStockLabel:hover {
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
+    cursor: pointer;
+    cursor: -moz-pointer;
+    cursor: -webkit-pointer;
 }
 #spinner {
     width: 100%;
