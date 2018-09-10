@@ -69,9 +69,7 @@ var audObject ={base: 'australian'};
 var jpyObject ={base: 'yen'};
      
    
- fx.convert(1, {from: "USD", to: "AUD"})
-    var usdToAud = fx.convert(1, {from: "USD", to: "AUD"})//.parseFloat().toFixed(2);
-    console.log('TESTTESTTESTTESTTEST' + usdToAud)        
+   
         
         
         
@@ -106,11 +104,11 @@ currencyConvert(1, 'USD', 'JPY').then(function(resp) {
     usdObject.jpy = usdToJpy;
 }).catch(console.log)
        
- if(callback){
+ //if(callback){
 
      
     return callback(usdObject);
- }
+// }
 }
  usdConversion(callback);
 
