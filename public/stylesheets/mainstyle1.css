@@ -391,7 +391,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
     font-weight: 900;
     position: absolute;
     top: 8%;
-    left: 39%;
+    left: 50%;
     color: black;
 }
 
@@ -399,7 +399,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
     font-weight: 900;
     position: absolute;
     top: 10%;
-    left: 39%;
+    left: 50%;
     color: black;
     font-size: 2vw;
 }
@@ -408,7 +408,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
     font-weight: 900;
     position: absolute;
     top: 11%;
-    left: 48%;
+    left: 59%;
     color: black;
     font-size: 1.6vw;
     margin-left: 2%;
@@ -418,7 +418,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
     font-weight: 900;
     position: absolute;
     top: 11%;
-    left: 55.5%;
+    left: 75.5%;
     color: black;
     font-size: 1.6vw;
     margin-left: 2%;
