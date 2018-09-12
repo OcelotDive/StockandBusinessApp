@@ -393,6 +393,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
     top: 5%;
     left: 50%;
     color: black;
+	margin-left: 20px;
 }
 
 .closePrice {
@@ -402,6 +403,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
     left: 50%;
     color: black;
     font-size: 2vw;
+	margin-left: 20px;
 }
 
 .priceChangeStock {
