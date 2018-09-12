@@ -369,7 +369,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
 #timeLineGroup {
     position: absolute;
     top: 88%;
-    left: 25%;
+    left: 3%;
 }
 
 #periodContainer {
@@ -380,6 +380,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
     color: #000000;
     font-size: 20pt;
     text-align: center;
+	margin-left: 30px;
 }
 
 .chartLi {
