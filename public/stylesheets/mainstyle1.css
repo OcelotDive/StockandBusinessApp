@@ -498,7 +498,9 @@ th,tr,td{
     width: 50%;
     
 }
-
+.periodButton {
+	margin-right: 5%;
+}
 /*Spinner for graph change*/
 
 .spinner {
