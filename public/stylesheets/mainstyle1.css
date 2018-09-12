@@ -393,6 +393,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
     top: 5%;
     left: 45%;
     color: black;
+	white-space: nowrap;
 	
 }
 
