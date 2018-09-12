@@ -36,7 +36,7 @@ a {
 }
 
 .contentContainer {
-    position: fixed;
+    position: absolute;
     top: 30%;
     left: 30%;
     border-radius: 10%;
@@ -52,7 +52,17 @@ a {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b', GradientType=0);
     /* IE6-9 */
 }
+.iFrame {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	border: #000 solid 30px;
+	border-radius: 10%;
+	
 
+}
 .commoditiesContainer {
     position: fixed;
     top: 72%;
@@ -324,6 +334,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
     width: 50%;
     margin-top: 5PX;
     margin-left: -20PX;
+	z-index: 9999;
 }
 
 #stockList {

@@ -11,7 +11,7 @@ const fx = require('money');
 var endDate;
 var startDate;
 
-
+/*
 function getDates() {
     
 var date = new Date();
