@@ -15,13 +15,13 @@
     </li>    
     </ul-->
       <div class="dropup" id="chartButtonList" ng-show="vm.loaded === true;">
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="mainButton2 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Chart Type
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item" type="button" selected="selected" ng-click="vm.runStockRequest(1);vm.reCalc();">Line</button>
-    <button class="dropdown-item" type="button" ng-click="vm.runStockRequest(2);vm.reCalc();">Scatter</button>
-    <button class="dropdown-item" type="button" ng-click="vm.runStockRequest(3);vm.reCalc();">Area</button> 
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" selected="selected" ng-click="vm.runStockRequest(1);vm.reCalc();">Line</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.runStockRequest(2);vm.reCalc();">Scatter</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.runStockRequest(3);vm.reCalc();">Area</button> 
   </div>
 </div>
 
@@ -38,36 +38,36 @@
         
     </div>
   <div class="dropup" id="timeLineGroup" ng-show="vm.loaded === true;">
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="mainButton2 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Interval
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item" type="button" selected="selected" ng-click="vm.getSelectionInterval('1min');vm.runStockRequest(vm.currentGraph);vm.reCalc();">1min</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionInterval('60min');vm.runStockRequest(vm.currentGraph);vm.reCalc();">60min</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionInterval('daily');vm.runStockRequest(vm.currentGraph);vm.reCalc();">daily</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionInterval('weekly');vm.runStockRequest(vm.currentGraph);vm.reCalc();">weekly</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionInterval('monthly');vm.runStockRequest(vm.currentGraph);vm.reCalc();">monthly</button>  
+  <div style="background: #777; color: white;"class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" selected="selected" ng-click="vm.getSelectionInterval('1min');vm.runStockRequest(vm.currentGraph);vm.reCalc();">1min</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionInterval('60min');vm.runStockRequest(vm.currentGraph);vm.reCalc();">60min</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionInterval('daily');vm.runStockRequest(vm.currentGraph);vm.reCalc();">daily</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionInterval('weekly');vm.runStockRequest(vm.currentGraph);vm.reCalc();">weekly</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionInterval('monthly');vm.runStockRequest(vm.currentGraph);vm.reCalc();">monthly</button>  
   </div>
 </div>
     
   <div class="dropup" id="timeLineGroup" ng-show="vm.loaded === true;" style="margin-left: 80px";>
-  <button class="btn btn-default dropdown-toggle periodButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="mainButton2 dropdown-toggle periodButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Period
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(2);vm.runStockRequest(vm.currentGraph);vm.reCalc();">1</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(3);vm.runStockRequest(vm.currentGraph);vm.reCalc();">2</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(4);vm.runStockRequest(vm.currentGraph);vm.reCalc();">3</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(5);vm.runStockRequest(vm.currentGraph);vm.reCalc();">4</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(6);vm.runStockRequest(vm.currentGraph);vm.reCalc();">5</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(7);vm.runStockRequest(vm.currentGraph);vm.reCalc();">6</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(8);vm.runStockRequest(vm.currentGraph);vm.reCalc();">7</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(9);vm.runStockRequest(vm.currentGraph);vm.reCalc();">8</button> 
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(10);vm.runStockRequest(vm.currentGraph);vm.reCalc();">9</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(13);vm.runStockRequest(vm.currentGraph);vm.reCalc();">12</button>  
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(57);vm.runStockRequest(vm.currentGraph);vm.reCalc();">56</button> 
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(101);vm.runStockRequest(vm.currentGraph);vm.reCalc();">100</button>  
-    <button class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(357);vm.runStockRequest(vm.currentGraph);vm.reCalc();">356</button>  
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(2);vm.runStockRequest(vm.currentGraph);vm.reCalc();">1</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(3);vm.runStockRequest(vm.currentGraph);vm.reCalc();">2</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(4);vm.runStockRequest(vm.currentGraph);vm.reCalc();">3</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(5);vm.runStockRequest(vm.currentGraph);vm.reCalc();">4</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(6);vm.runStockRequest(vm.currentGraph);vm.reCalc();">5</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(7);vm.runStockRequest(vm.currentGraph);vm.reCalc();">6</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(8);vm.runStockRequest(vm.currentGraph);vm.reCalc();">7</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(9);vm.runStockRequest(vm.currentGraph);vm.reCalc();">8</button> 
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(10);vm.runStockRequest(vm.currentGraph);vm.reCalc();">9</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(13);vm.runStockRequest(vm.currentGraph);vm.reCalc();">12</button>  
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(57);vm.runStockRequest(vm.currentGraph);vm.reCalc();">56</button> 
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(101);vm.runStockRequest(vm.currentGraph);vm.reCalc();">100</button>  
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getSelectionPeriod(357);vm.runStockRequest(vm.currentGraph);vm.reCalc();">356</button>  
    
  
       

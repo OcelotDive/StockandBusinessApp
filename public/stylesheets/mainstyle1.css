@@ -176,6 +176,69 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
     height: 26%;
 }
 
+.mainButton2 {
+	position: relative;
+	background: orangered;
+	border: none;
+	color: white;
+	padding: 15px 24px;
+	font-size: 1.4rem;
+	box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+	
+}
+.mainButton2:hover {
+	background: hsl(16, 100%, 45%);
+}
+
+.mainButton2:active {
+	background: hsl(16, 100%, 40%);
+	top: 3px;
+	left: -3px;
+	box-shadow: -3px 3px 0 hsl(16, 100%, 30%);
+}
+
+.mainButton2::before {
+	position: absolute;
+	display: block;
+	content: "";
+	height: 0;
+	width: 0;
+	border: solid 6px transparent;
+	border-right: solid 6px hsl(16, 100%, 30%);
+	border-left-width: 0;
+	background: none;
+	top: 0px;
+	left: -6px;
+}
+.mainButton2::after {
+	position: absolute;
+	display: block;
+	content: "";
+	height: 0;
+	width: 0;
+	border: solid 6px transparent;
+	border-top: solid 6px hsl(16, 100%, 30%);
+	border-bottom-width: 0;
+	background: none;
+	top: 100%;
+	right: 0px;
+}
+
+.mainButton2:active::before {
+	border: solid 3px transparent;
+	border-right: solid 3px hsl(16, 100%, 30%);
+	border-left-width: 0;
+	left: -3px;
+	
+}
+.mainButton2:active::after {
+	border: solid 3px transparent;
+	border-top: solid 3px hsl(16, 100%, 30%);
+	border-bottom-width: 0;
+	right: 0px;
+	
+}
+
 .titleSplitOne {
     font-size: 500%;
     background: -webkit-linear-gradient(#eee, #333);
@@ -221,18 +284,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
 
 #quoteButton {
     position: absolute;
-    top: 20%;
+    top: 30%;
     margin-left: 6%;
+	margin-bottom: 10%;
 }
 
 #commoditiesButton {
     position: absolute;
-    top: 28%;
+    top: 40%;
     margin-left: 6%;
 }
 #currenciesButton {
     position: absolute;
-    top: 36%;
+    top: 50%;
     margin-left: 6%;
     
 }
@@ -240,7 +304,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', end
 
 #newsSourceButton {
      position: absolute;
-    top: 44%;
+    top: 60%;
     margin-left: 6%;
 }
 

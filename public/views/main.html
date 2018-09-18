@@ -33,22 +33,22 @@
 </iframe>
     
     </section>
-    <button id="quoteButton" class="btn btn-default" onclick="" data-toggle="modal" data-target="#stockModal">Quotes</button>
-    <button id="commoditiesButton" class="btn btn-default" onclick="expand()">Commodities</button>
-    <button id="currenciesButton" class="btn btn-default" onclick="expandCurrencies()">Currencies</button>
+    <button id="quoteButton" class="mainButton2" onclick="" data-toggle="modal" data-target="#stockModal">Stock Quotes</button>
+    <button id="commoditiesButton" class="mainButton2" onclick="expand()">Commodities</button>
+    <button id="currenciesButton" class="mainButton2" onclick="expandCurrencies()">Currencies</button>
     
     <div class="dropdown" id="newsSourceButton">
-  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="mainButton2 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     News Source
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item" type="button" selected="selected" ng-click="vm.getNews('the-wall-street-journal');">Wall Street Journal</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getNews('fortune');">Fortune</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getNews('the-economist');">The Economist</button>
-    <button class="dropdown-item" type="button" ng-click="vm.getNews('techradar');">Tech Radar</button>
-      <button class="dropdown-item" type="button" ng-click="vm.getNews('cnbc');">CNBC</button>
-      <button class="dropdown-item" type="button" ng-click="vm.getNews('bloomberg');">Bloomberg</button>
-      <button class="dropdown-item" type="button" ng-click="vm.getNews('reuters');">Reuters</button> 
+    <button style="background: #777; color: white;"class="dropdown-item" type="button" selected="selected" ng-click="vm.getNews('the-wall-street-journal');">Wall Street Journal</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getNews('fortune');">Fortune</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getNews('the-economist');">The Economist</button>
+    <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getNews('techradar');">Tech Radar</button>
+      <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getNews('cnbc');">CNBC</button>
+      <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getNews('bloomberg');">Bloomberg</button>
+      <button style="background: #777; color: white;" class="dropdown-item" type="button" ng-click="vm.getNews('reuters');">Reuters</button> 
   </div>
 </div>
     
@@ -62,7 +62,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 class="modal-title" style="font-weight: 900;">Stock Tracker</h4>
+                <h3 class="modal-title" style="font-weight: 900;">Stock Tracker</h3>
             </div>
             <div class="modal-body">
                
@@ -76,7 +76,7 @@
         </div>
   
         <div class="inputSection">
-   <input class="addText" type="text" placeholder="SYMBOL" ng-model="vm.stock.symbol"/> 
+   <input class="addText" type="text" placeholder="ADD SYMBOL" ng-model="vm.stock.symbol"/> 
         
       
          
@@ -86,8 +86,8 @@
             </div>
             <div class="modal-footer">
                 
-                <button type="button" class="btn btn-default"  ng-click="vm.addStock();">ADD</button>
-                <button type="button" class="btn btn-default"  ng-click="vm.removeStock();">REMOVE</button>
+                <button type="button" class="mainButton2"  ng-click="vm.addStock();">ADD</button>&nbsp;
+                <button type="button" class="mainButton2"  ng-click="vm.removeStock();">REMOVE</button>
                 
             </div>
            
